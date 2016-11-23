@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">MyEcard</string>
+
+    <string name="ip_address">服务器IP：</string>
+    <string name="hint_ip_address">请输入服务器ip地址</string>
+    <string name="port">端口号：</string>
+    <string name="hint_port">默认端口：80</string>
+    <string name="login_button">登录</string>
+
+    <string name="login_info_file">LoginInfo</string>
+    <string name="preference_ip_key">ip_address</string>
+    <string name="preference_port_key">port_num</string>
+    <string name="preference_classroom_key">classroom</string>
+    <string name="preference_mac_address_key">mac_address</string>
+    <string name="preference_default_ip">-1</string>
+    <string name="preference_default_port">80</string>
+    <string name="preference_checkin_start_key">checkin_time_start</string>
+    <string name="preference_checkin_end_key">checkin_time_end</string>
+    <string name="preference_checkout_start_key">checkout_time_start</string>
+    <string name="preference_checkout_end_key">checkout_time_end</string>
+    <string name="preference_checkin_photo_key">checkin_photo</string>
+    <string name="preference_checkin_feeling_key">checkin_feeling</string>
+    <string name="preference_vclassroom_key">vclassroom_checkin_spinner</string>
+
+</resources>
