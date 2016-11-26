@@ -7,7 +7,9 @@ import android.widget.Toast;
 import com.example.lw.myecard.Activities.CheckActivity;
 import com.example.lw.myecard.Activities.MainActivity;
 import com.example.lw.myecard.Activities.PersonalCenterActivity;
+import com.example.lw.myecard.JsonData.CheckJson;
 import com.example.lw.myecard.JsonData.StudentJson;
+import com.example.lw.myecard.R;
 
 import java.lang.ref.WeakReference;
 
@@ -51,14 +53,14 @@ public class CardHandler extends Handler {
             case CARD_HANDLER_CHECK_IN:
                 activity = mActivityWeakReference.get();
                 if(null != activity) {
-                    CheckActivity.start(activity, "签到成功");
+                    CheckActivity.start(activity, "签到成功", R.drawable.checkin);
                 }
                 break;
 
             case CARD_HANDLER_CHECK_OUT:
                 activity = mActivityWeakReference.get();
                 if(null != activity) {
-                    CheckActivity.start(activity, "签退成功");
+                    CheckActivity.start(activity, "签退成功", R.drawable.checkout);
                 }
                 break;
 
@@ -66,7 +68,8 @@ public class CardHandler extends Handler {
                 activity = mActivityWeakReference.get();
                 if(null != activity) {
                     /*start personal center activity*/
-                    PersonalCenterActivity.start(activity);
+                    CheckJson checkJson = (CheckJson) msg.obj;
+                    PersonalCenterActivity.start(activity, checkJson);
                 }
             default:
                 break;

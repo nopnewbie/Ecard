@@ -1,15 +1,20 @@
 package com.example.lw.myecard.Activities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Handler;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import com.example.lw.myecard.JsonData.CheckTimeJson;
@@ -91,10 +96,12 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private String getMAC() {
-        //        String Mac;
-        //        WifiManager wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
-        //        WifiInfo info = wifiManager.getConnectionInfo();
-        //        return info.getMacAddress();
+//        String Mac;
+//        WifiManager wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+//        WifiInfo info = wifiManager.getConnectionInfo();
+//        Mac = info.getMacAddress();
+//
+//        return Mac.replace(':', '-');
         return "94-a1-a2-a2-45-22"; //测试用
     }
 

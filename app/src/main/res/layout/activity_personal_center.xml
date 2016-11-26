@@ -1,14 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:background="@drawable/background">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="欢迎来到个人中心"
-        android:textSize="32sp"/>
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/portrait"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/check_status_text_veiw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="签到"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:layout_marginTop="40dp"
+                android:padding="16dp"
+                android:background="@drawable/text_bg"/>
+
+            <TextView
+                android:id="@+id/student_name_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="姓名"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:layout_marginTop="40dp"
+                android:padding="16dp"
+                android:background="@drawable/text_bg"/>
+
+            <TextView
+                android:id="@+id/classroom_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="班级"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:layout_marginTop="40dp"
+                android:padding="16dp"
+                android:background="@drawable/text_bg"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/message_image_button"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/message"
+            android:background="@android:color/transparent"/>
+
+        <ImageButton
+            android:id="@+id/phone_image_button"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="100dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/phone_call"
+            android:background="@android:color/transparent"/>
+
+        <ImageButton
+            android:id="@+id/camera_image_button"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="100dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/camera"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            layout="@layout/emotion"/>
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            layout="@layout/temperature"/>
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            layout="@layout/courses"/>
+
+    </LinearLayout>
+
+
+
 
 </LinearLayout>

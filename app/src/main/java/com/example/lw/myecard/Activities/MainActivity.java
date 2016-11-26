@@ -211,6 +211,7 @@ public class MainActivity extends Activity {
                         msg.what = CardHandler.CARD_HANDLER_CHECK_OUT;
                     } else {
                         msg.what = CardHandler.CARD_HANDLER_PERSONAL_CENTER;
+                        msg.obj = checkJson;
                     }
 
                     msg.sendToTarget();
@@ -236,7 +237,7 @@ public class MainActivity extends Activity {
     };
 
     private long mLastInputTime = 0;
-    private static final long INPUT_DELAY = 100;
+    private static final long INPUT_DELAY = 2000;
     private final StringBuilder mInputStringBuilder = new StringBuilder();
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {

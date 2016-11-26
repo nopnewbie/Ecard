@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:gravity="center"
+              android:weightSum="1">
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/shape_ring_yellow"/>
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="20dp"
+        android:src="@drawable/shape_line_yellow"
+        android:scaleType="fitCenter"/>
+
+    <Button
+        android:id="@+id/emotion_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="心情互动"
+        android:textColor="@color/yellow"
+        android:textSize="48sp"
+        android:layout_marginStart="20dp"
+        android:background="@android:color/transparent"/>
+
+</LinearLayout>

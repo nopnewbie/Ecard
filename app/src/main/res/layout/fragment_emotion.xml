@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:background="@android:color/transparent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请告诉我你的心情"
+        android:textSize="40sp"
+        android:textColor="@android:color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/emotion_happy_image_view"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/happy"/>
+
+        <ImageView
+            android:id="@+id/emotion_smile_image_view"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/smile"/>
+
+        <ImageView
+            android:id="@+id/emotion_sad_image_view"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/sad"/>
+
+        <ImageView
+            android:id="@+id/emotion_cry_image_view"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/cry"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
