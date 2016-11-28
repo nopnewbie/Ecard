@@ -6,10 +6,35 @@
               android:gravity="center"
               android:background="@android:color/transparent">
 
-    <Button
-        android:id="@+id/take_picture_button"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/portrait_image_view"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginBottom="32dp"
+        android:scaleType="fitCenter"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/fragment_camera"/>
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/take_picture_button"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/fragment_camera"/>
+
+        <Button
+            android:id="@+id/upload_picture_button"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="32dp"
+            android:background="@drawable/upload"/>
+
+
+    </LinearLayout>
+
+
 
 </LinearLayout>

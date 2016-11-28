@@ -24,11 +24,14 @@ import org.w3c.dom.Text;
 
 public class PersonalCenterActivity extends Activity {
 
+    private final static String STUDEND_ID_KEY = "student_id";
     private final static String STUDENT_NAME_KEY = "student_name";
     private final static String CHECK_STATUS_KEY = "check_status";
 
-    public static void start(final Context context, CheckJson checkJson) {
+
+    public static void start(final Context context,String studentId, CheckJson checkJson) {
         Intent intent = new Intent(context, PersonalCenterActivity.class);
+        intent.putExtra(STUDEND_ID_KEY, studentId);
         intent.putExtra(STUDENT_NAME_KEY, checkJson.getStudentName());
         intent.putExtra(CHECK_STATUS_KEY, checkJson.getType());
         context.startActivity(intent);
@@ -49,6 +52,7 @@ public class PersonalCenterActivity extends Activity {
 
     private SharedPreferences mSharedPreferences;
 
+    private String mStudentId;
     private String mStudentName;
     private String mCheckStatus;
 
@@ -77,6 +81,8 @@ public class PersonalCenterActivity extends Activity {
         mStudentNameTextView = (TextView) findViewById(R.id.student_name_text_view);
         mStudentNameTextView.setText(mStudentName);
 
+        mStudentId = intent.getStringExtra(STUDEND_ID_KEY);
+
 
 
         mPhoneCallImgBtn = (ImageButton) findViewById(R.id.phone_image_button);
@@ -84,7 +90,7 @@ public class PersonalCenterActivity extends Activity {
             @Override
             public void onClick(View view) {
 //                testButton("Phone call");
-                ShowFragments.start(PersonalCenterActivity.this, ShowFragments.FRAG_PHONE);
+                ShowFragments.start(PersonalCenterActivity.this, ShowFragments.FRAG_PHONE, mStudentId);
                 PersonalCenterActivity.this.finish();
             }
         });
@@ -94,7 +100,7 @@ public class PersonalCenterActivity extends Activity {
             @Override
             public void onClick(View view) {
 //                testButton("Message");
-                ShowFragments.start(PersonalCenterActivity.this, ShowFragments.FRAG_MSG);
+                ShowFragments.start(PersonalCenterActivity.this, ShowFragments.FRAG_MSG, mStudentId);
                 PersonalCenterActivity.this.finish();
             }
         });
@@ -104,7 +110,7 @@ public class PersonalCenterActivity extends Activity {
             @Override
             public void onClick(View view) {
 //                testButton("Camera");
-                ShowFragments.start(PersonalCenterActivity.this, ShowFragments.FRAG_CAMERA);
+                ShowFragments.start(PersonalCenterActivity.this, ShowFragments.FRAG_CAMERA, mStudentId);
                 PersonalCenterActivity.this.finish();
             }
         });
@@ -114,7 +120,7 @@ public class PersonalCenterActivity extends Activity {
             @Override
             public void onClick(View view) {
 //                testButton("temperature");
-                ShowFragments.start(PersonalCenterActivity.this, ShowFragments.FRAG_TEMP);
+                ShowFragments.start(PersonalCenterActivity.this, ShowFragments.FRAG_TEMP, mStudentId);
                 PersonalCenterActivity.this.finish();
             }
         });
@@ -124,7 +130,7 @@ public class PersonalCenterActivity extends Activity {
             @Override
             public void onClick(View view) {
 //                testButton("Courses");
-                ShowFragments.start(PersonalCenterActivity.this, ShowFragments.FRAG_COURSES);
+                ShowFragments.start(PersonalCenterActivity.this, ShowFragments.FRAG_COURSES, mStudentId);
                 PersonalCenterActivity.this.finish();
             }
         });
@@ -134,7 +140,7 @@ public class PersonalCenterActivity extends Activity {
             @Override
             public void onClick(View view) {
 //                testButton("emotion");
-                ShowFragments.start(PersonalCenterActivity.this, ShowFragments.FRAG_EMOTION);
+                ShowFragments.start(PersonalCenterActivity.this, ShowFragments.FRAG_EMOTION, mStudentId);
                 PersonalCenterActivity.this.finish();
             }
         });

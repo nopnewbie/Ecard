@@ -5,11 +5,11 @@
               android:layout_height="match_parent"
               android:background="@android:color/transparent">
 
-    <TextView
+    <ListView
+        android:id="@+id/phone_list_view"
+        android:layout_margin="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="48sp"
-        android:text="This is phone message"/>
+        android:layout_height="match_parent">
+    </ListView>
 
 </LinearLayout>

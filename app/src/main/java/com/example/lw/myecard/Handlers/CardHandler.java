@@ -26,6 +26,8 @@ public class CardHandler extends Handler {
 
     private WeakReference<MainActivity> mActivityWeakReference;
 
+    private String mStudentId;
+
     public CardHandler(WeakReference<MainActivity> activityWeakReference) {
         mActivityWeakReference = activityWeakReference;
     }
@@ -47,6 +49,7 @@ public class CardHandler extends Handler {
                    // StudentJson studentInfo = (StudentJson) msg.obj;
                     String studentId = (String) msg.obj;
                     activity.studentCheck(studentId);
+                    mStudentId = studentId;
                 }
                 break;
 
@@ -69,7 +72,7 @@ public class CardHandler extends Handler {
                 if(null != activity) {
                     /*start personal center activity*/
                     CheckJson checkJson = (CheckJson) msg.obj;
-                    PersonalCenterActivity.start(activity, checkJson);
+                    PersonalCenterActivity.start(activity, mStudentId, checkJson);
                 }
             default:
                 break;

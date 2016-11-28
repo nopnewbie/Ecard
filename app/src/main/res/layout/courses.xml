@@ -21,7 +21,7 @@
         android:id="@+id/courses_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="查看课程"
+        android:text="课程安排"
         android:textColor="@color/green"
         android:textSize="48sp"
         android:layout_marginStart="20dp"

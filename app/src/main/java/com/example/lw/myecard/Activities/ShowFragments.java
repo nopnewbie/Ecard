@@ -25,6 +25,7 @@ import com.example.lw.myecard.R;
 public class ShowFragments extends Activity {
 
     private static final String FRAG_INDEX_KEY = "fragment_index_to_start";
+    private static final String STUDENT_ID_KEY = "student_id";
 
     public static final int FRAG_EMOTION = 0;
     public static final int FRAG_TEMP = 1;
@@ -34,21 +35,29 @@ public class ShowFragments extends Activity {
     public static final int FRAG_COURSES = 5;
 
 
-    public static void start(Context context, int indexOfFragment) {
+    public static void start(Context context, int indexOfFragment, String studentId) {
         Intent intent = new Intent(context, ShowFragments.class);
         intent.putExtra(FRAG_INDEX_KEY, indexOfFragment);
+        intent.putExtra(STUDENT_ID_KEY, studentId);
         context.startActivity(intent);
     }
 
-    private final Fragment[] mFragments = {new EmotionFragment(),new TemperatureFragment(), new MessageFragment(), new PhoneFragment(), new CameraFragment(), new CoursesFragment()};
+    private final Fragment[] mFragments;
     private Fragment mCurrentFragment;
     private FragmentManager mFragmentManager;
+
+    private String mStudentId;
+
+    public ShowFragments() {
+        mFragments = new Fragment[]{new EmotionFragment(),new TemperatureFragment(), new MessageFragment(), new PhoneFragment(), new CameraFragment(), new CoursesFragment()};
+    }
 
     /**
      * Initialize mFragmentManager, mCurrentFragment
      * */
     private void init() {
         Intent intent = getIntent();
+        mStudentId = intent.getStringExtra(STUDENT_ID_KEY);
         mFragmentManager = getFragmentManager();
         switch2Fragment(intent.getIntExtra(FRAG_INDEX_KEY, FRAG_EMOTION));
     }
@@ -131,5 +140,9 @@ public class ShowFragments extends Activity {
         }
         mCurrentFragment = mFragments[index];
         transaction.commit();
+    }
+
+    public String getStudentId() {
+        return mStudentId;
     }
 }

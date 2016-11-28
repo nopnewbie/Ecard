@@ -50,10 +50,10 @@ public class InitViewPagerHandler extends Handler {
 
     @Override
     public void handleMessage(Message msg) {
-
+        final Activity activity = mActivityWeakReference.get();
         switch (msg.what) {
+
             case INIT_VIEW_PAGER:
-                final Activity activity = mActivityWeakReference.get();
                 if(null == activity) {
                     return;
                 }
@@ -88,7 +88,7 @@ public class InitViewPagerHandler extends Handler {
                 break;
 
             case UPDATE_PAGE:   //auto scroll to next page
-                if(null != mViewPager) {
+                if(null != activity && null != mViewPager) {
                     pageIndex = (pageIndex + 1) % Integer.MAX_VALUE;
                     mViewPager.setCurrentItem(pageIndex);
 

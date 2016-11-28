@@ -237,7 +237,7 @@ public class MainActivity extends Activity {
     };
 
     private long mLastInputTime = 0;
-    private static final long INPUT_DELAY = 2000;
+    private static final long INPUT_DELAY = 100;
     private final StringBuilder mInputStringBuilder = new StringBuilder();
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
