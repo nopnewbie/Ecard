@@ -19,7 +19,7 @@ import java.lang.ref.WeakReference;
 
 public class CardHandler extends Handler {
     public final static int CARD_HANDLER_FAILED = 1;
-    public final static int CARD_HANDLER_SUCCESSED = 2;
+    public final static int CARD_HANDLER_SUCCEEDED = 2;
     public final static int CARD_HANDLER_CHECK_IN = 3;
     public final static int CARD_HANDLER_CHECK_OUT = 4;
     public final static int CARD_HANDLER_PERSONAL_CENTER = 5;
@@ -43,7 +43,7 @@ public class CardHandler extends Handler {
                 }
                 break;
 
-            case CARD_HANDLER_SUCCESSED:
+            case CARD_HANDLER_SUCCEEDED:
                 activity = mActivityWeakReference.get();
                 if(null != activity) {
                    // StudentJson studentInfo = (StudentJson) msg.obj;

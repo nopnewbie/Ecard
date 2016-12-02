@@ -5,62 +5,73 @@
               android:layout_height="match_parent"
               android:background="@drawable/background"
               android:weightSum="1">
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="100dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/show_emotion_frag_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:background="@drawable/fragment_emotion"/>
+        <com.example.lw.myecard.Layouts.TitleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/show_temp_frag_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:background="@drawable/fragment_temperature"/>
+        </com.example.lw.myecard.Layouts.TitleLayout>
 
-        <Button
-            android:id="@+id/show_msg_frag_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:background="@drawable/fragment_message"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/show_phone_frag_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:background="@drawable/fragment_phone"/>
+            <Button
+                android:id="@+id/show_emotion_frag_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/fragment_emotion"/>
 
-        <Button
-            android:id="@+id/show_camera_frag_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:background="@drawable/fragment_camera"/>
+            <Button
+                android:id="@+id/show_temp_frag_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/fragment_temperature"/>
 
-        <Button
-            android:id="@+id/show_course_frag_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:background="@drawable/fragment_courses"/>
+            <Button
+                android:id="@+id/show_msg_frag_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/fragment_message"/>
 
-        <Button
-            android:id="@+id/exit_frag_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:background="@drawable/fragment_exit"/>
+            <Button
+                android:id="@+id/show_phone_frag_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/fragment_phone"/>
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/show_camera_frag_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/fragment_camera"/>
+
+            <Button
+                android:id="@+id/show_course_frag_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/fragment_courses"/>
+
+            <Button
+                android:id="@+id/exit_frag_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/fragment_exit"/>
+
+        </LinearLayout>
+    </FrameLayout>
 
     <!--This FrameLayout containers several different fragments-->
     <FrameLayout

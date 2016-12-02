@@ -3,10 +3,22 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
-    <WebView
-        android:id="@+id/web_view"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    </WebView>
+
+        <WebView
+            android:id="@+id/web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </WebView>
+
+        <com.example.lw.myecard.Layouts.TitleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.example.lw.myecard.Layouts.TitleLayout>
+
+    </FrameLayout>
+
 
 </LinearLayout>

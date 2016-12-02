@@ -237,7 +237,7 @@ public class MainActivity extends Activity {
     };
 
     private long mLastInputTime = 0;
-    private static final long INPUT_DELAY = 100;
+    private static final long INPUT_DELAY = 2000;
     private final StringBuilder mInputStringBuilder = new StringBuilder();
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
@@ -277,7 +277,7 @@ public class MainActivity extends Activity {
                     if(null == studentInfo.getErrorCode() || 0 != studentInfo.getErrorCode() ) {
                         msg.what = CardHandler.CARD_HANDLER_FAILED;
                     } else {
-                        msg.what = CardHandler.CARD_HANDLER_SUCCESSED;
+                        msg.what = CardHandler.CARD_HANDLER_SUCCEEDED;
                         msg.obj = studentId;
                     }
                     msg.sendToTarget();

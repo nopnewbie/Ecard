@@ -7,70 +7,83 @@
               android:layout_height="match_parent"
               android:background="@drawable/background">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
-        android:orientation="horizontal">
+        android:layout_weight="2">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2">
+            android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/portrait"/>
+                android:layout_weight="2">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/portrait"
+                    android:id="@+id/imageView2"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/check_status_text_veiw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="签到"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:layout_marginTop="70dp"
+                    android:padding="16dp"
+                    android:background="@drawable/text_bg"/>
+
+                <TextView
+                    android:id="@+id/student_name_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="姓名"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:layout_marginTop="40dp"
+                    android:padding="16dp"
+                    android:background="@drawable/text_bg"/>
+
+                <TextView
+                    android:id="@+id/classroom_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="班级"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:layout_marginTop="40dp"
+                    android:padding="16dp"
+                    android:background="@drawable/text_bg"/>
+
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+        <com.example.lw.myecard.Layouts.TitleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.example.lw.myecard.Layouts.TitleLayout>
 
-            <TextView
-                android:id="@+id/check_status_text_veiw"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="签到"
-                android:gravity="center"
-                android:textSize="24sp"
-                android:layout_marginTop="40dp"
-                android:padding="16dp"
-                android:background="@drawable/text_bg"/>
-
-            <TextView
-                android:id="@+id/student_name_text_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="姓名"
-                android:gravity="center"
-                android:textSize="24sp"
-                android:layout_marginTop="40dp"
-                android:padding="16dp"
-                android:background="@drawable/text_bg"/>
-
-            <TextView
-                android:id="@+id/classroom_text_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="班级"
-                android:gravity="center"
-                android:textSize="24sp"
-                android:layout_marginTop="40dp"
-                android:padding="16dp"
-                android:background="@drawable/text_bg"/>
-
-
-        </LinearLayout>
-
-    </LinearLayout>
+    </FrameLayout>
 
 
     <LinearLayout
